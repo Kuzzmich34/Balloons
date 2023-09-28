@@ -1,0 +1,179 @@
+/* line 1, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 6, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+html {
+  font-size: 10px;
+}
+
+/* line 9, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+body {
+  font-family: "roboto";
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  padding: 5rem;
+  background-color: white;
+}
+
+/* line 17, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.container {
+  background-color: #F7F7F7;
+}
+
+/* line 19, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/Balloons-header.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+/* line 24, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+
+/* line 30, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* line 37, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.title-first {
+  color: #FFF;
+}
+
+/* line 39, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.title-first__main {
+  display: block;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: leftTOright 3s ease 1s;
+  backface-visibility: hidden;
+}
+
+/* line 49, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.title-first__secondary {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 4.8rem;
+  letter-spacing: 0.5rem;
+  animation: rightTOleft 3s ease 1s;
+  backface-visibility: hidden;
+  margin-bottom: 6.5rem;
+}
+
+/* line 59, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777777;
+  padding: 1.5rem 4rem;
+  background: white;
+  border-radius: 5rem;
+  display: inline-block;
+  transition: all .5s;
+  position: relative;
+  font-size: 2rem;
+}
+
+/* line 70, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* line 73, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+
+/* line 76, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* line 79, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.btn::after {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+/* line 91, C:/Users/Ksennikov/Desktop/Project - Balloons/sass/style.sass */
+.btn_animated {
+  animation: btnTOup 3s ease-out 1s;
+  animation-fill-mode: backwards;
+  backface-visibility: hidden;
+}
+
+@keyframes btnTOup {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes leftTOright {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  60% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes rightTOleft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  60% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
